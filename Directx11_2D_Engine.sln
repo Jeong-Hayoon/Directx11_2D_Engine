@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33122.133
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Directx11_2D_Engine_SOURCE", "Directx11_2D_Engine_SOURCE\Directx11_2D_Engine_SOURCE.vcxitems", "{8AF5C644-A60C-4393-A3FA-D15E0C375E82}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Editor_SOURCE", "Editor_SOURCE\Editor_SOURCE.vcxitems", "{5CD00373-D0BA-4D67-A473-8118A2452BFA}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Shaders_SOURCE", "Shaders_SOURCE\Shaders_SOURCE.vcxitems", "{C70524A4-3887-4FBF-8069-C163CA1AB320}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Editor_Windows", "Editor_Windows\Editor_Windows.vcxproj", "{FF0E1109-E85C-4311-97AB-3510B6BCC39F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Directx11_2D_Engine_Windows", "Directx11_2D_Engine_Windows\Directx11_2D_Engine_Windows.vcxproj", "{D678188F-EEC4-434B-B893-4E2DD4F3EE5C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FF0E1109-E85C-4311-97AB-3510B6BCC39F}.Debug|x64.ActiveCfg = Debug|x64
+		{FF0E1109-E85C-4311-97AB-3510B6BCC39F}.Debug|x64.Build.0 = Debug|x64
+		{FF0E1109-E85C-4311-97AB-3510B6BCC39F}.Debug|x86.ActiveCfg = Debug|Win32
+		{FF0E1109-E85C-4311-97AB-3510B6BCC39F}.Debug|x86.Build.0 = Debug|Win32
+		{FF0E1109-E85C-4311-97AB-3510B6BCC39F}.Release|x64.ActiveCfg = Release|x64
+		{FF0E1109-E85C-4311-97AB-3510B6BCC39F}.Release|x64.Build.0 = Release|x64
+		{FF0E1109-E85C-4311-97AB-3510B6BCC39F}.Release|x86.ActiveCfg = Release|Win32
+		{FF0E1109-E85C-4311-97AB-3510B6BCC39F}.Release|x86.Build.0 = Release|Win32
+		{D678188F-EEC4-434B-B893-4E2DD4F3EE5C}.Debug|x64.ActiveCfg = Debug|x64
+		{D678188F-EEC4-434B-B893-4E2DD4F3EE5C}.Debug|x64.Build.0 = Debug|x64
+		{D678188F-EEC4-434B-B893-4E2DD4F3EE5C}.Debug|x86.ActiveCfg = Debug|Win32
+		{D678188F-EEC4-434B-B893-4E2DD4F3EE5C}.Debug|x86.Build.0 = Debug|Win32
+		{D678188F-EEC4-434B-B893-4E2DD4F3EE5C}.Release|x64.ActiveCfg = Release|x64
+		{D678188F-EEC4-434B-B893-4E2DD4F3EE5C}.Release|x64.Build.0 = Release|x64
+		{D678188F-EEC4-434B-B893-4E2DD4F3EE5C}.Release|x86.ActiveCfg = Release|Win32
+		{D678188F-EEC4-434B-B893-4E2DD4F3EE5C}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {901074D2-DE81-4DEE-9165-2B0E3556C529}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Editor_SOURCE\Editor_SOURCE.vcxitems*{5cd00373-d0ba-4d67-a473-8118a2452bfa}*SharedItemsImports = 9
+		Directx11_2D_Engine_SOURCE\Directx11_2D_Engine_SOURCE.vcxitems*{8af5c644-a60c-4393-a3fa-d15e0c375e82}*SharedItemsImports = 9
+		Shaders_SOURCE\Shaders_SOURCE.vcxitems*{c70524a4-3887-4fbf-8069-c163ca1ab320}*SharedItemsImports = 9
+		Directx11_2D_Engine_SOURCE\Directx11_2D_Engine_SOURCE.vcxitems*{d678188f-eec4-434b-b893-4e2dd4f3ee5c}*SharedItemsImports = 4
+		Editor_SOURCE\Editor_SOURCE.vcxitems*{ff0e1109-e85c-4311-97ab-3510b6bcc39f}*SharedItemsImports = 4
+	EndGlobalSection
+EndGlobal

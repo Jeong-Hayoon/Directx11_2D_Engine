@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <ItemsProjectGuid>{8af5c644-a60c-4393-a3fa-d15e0c375e82}</ItemsProjectGuid>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectCapability Include="SourceItemsFromImports" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)hyCanvas.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)CommonInclude.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Directx11_2D_Engine.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)hyApplication.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)hyBullet.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)hyComponent.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)hyConstantBuffer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)hyEntity.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)hyEnums.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)hyGameObject.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)hyGraphics.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)hyGraphicsDevice.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)hyGraphicsDevice_DX11.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)hyInput.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)hyLayer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)hyMaterial.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)hymath.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)hyMesh.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)hyMeshRenderer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)hyObject.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)hyPlayer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)hyRenderer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)hyResource.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)hyResources.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)hyScene.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)hySceneManager.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)hyShader.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)hyTime.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)hyTransform.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)hyApplication.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)hyBullet.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)hyComponent.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)hyConstantBuffer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)hyEntity.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)hyGameObject.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)hyGraphicsDevice_DX11.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)hyInput.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)hyLayer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)hyMaterial.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)hymath.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)hyMesh.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)hyMeshRenderer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)hyPlayer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)hyRenderer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)hyResource.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)hyResources.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)hyScene.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)hySceneManager.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)hyShader.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)hyTime.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)hyTransform.cpp" />
+  </ItemGroup>
+</Project>
