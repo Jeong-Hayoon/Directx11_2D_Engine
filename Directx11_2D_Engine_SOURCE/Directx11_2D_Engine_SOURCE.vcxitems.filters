@@ -1,20 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Contents">
-      <UniqueIdentifier>{9c6b7b3d-59c6-4c3f-818e-0e7459466bae}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Engine">
       <UniqueIdentifier>{3c27ee69-f1d2-49ad-8582-cf4f595043a1}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Contents\GameObject">
-      <UniqueIdentifier>{45c0c128-02be-4d0d-a324-c7ac106350bb}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Contents\GameObject\Player">
-      <UniqueIdentifier>{c4243093-c609-46c9-a632-d921ff22b82b}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Contents\GameObject\Bullet">
-      <UniqueIdentifier>{d90384e4-0ecf-4616-8c5e-30c55e4ac141}</UniqueIdentifier>
     </Filter>
     <Filter Include="Engine\Common">
       <UniqueIdentifier>{74d2b316-399e-415b-aa94-c9eb2904948d}</UniqueIdentifier>
@@ -66,12 +54,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="$(MSBuildThisFileDirectory)hyBullet.h">
-      <Filter>Contents\GameObject\Bullet</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)hyPlayer.h">
-      <Filter>Contents\GameObject\Player</Filter>
-    </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)CommonInclude.h">
       <Filter>Engine\Common</Filter>
     </ClInclude>
@@ -153,14 +135,11 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)hyResource.h">
       <Filter>Engine\Resource</Filter>
     </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)hyScript.h">
+      <Filter>Engine\Component</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="$(MSBuildThisFileDirectory)hyBullet.cpp">
-      <Filter>Contents\GameObject\Bullet</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)hyPlayer.cpp">
-      <Filter>Contents\GameObject\Player</Filter>
-    </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)hyTransform.cpp">
       <Filter>Engine\Component</Filter>
     </ClCompile>
@@ -220,6 +199,9 @@
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)hyResource.cpp">
       <Filter>Engine\Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)hyScript.cpp">
+      <Filter>Engine\Component</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

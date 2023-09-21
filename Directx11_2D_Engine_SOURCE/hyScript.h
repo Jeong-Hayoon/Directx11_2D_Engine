@@ -1,21 +1,19 @@
 #pragma once
+#include "hyComponent.h"
 #include "hyEnums.h"
 #include "hyEntity.h"
 #include "hyMath.h"
 
 namespace hy
 {
-	using namespace enums;
-	using namespace math;
-
 	class GameObject;
-	class Component : public Entity
+	class Script : public Entity
 	{
 	public:
 		friend GameObject;
 
-		Component(COMPONENTTYPE type);
-		virtual ~Component();
+		Script();
+		virtual ~Script();
 
 		virtual void Initialize() = 0;
 		virtual void Update() = 0;
@@ -23,12 +21,10 @@ namespace hy
 		virtual void Render() = 0;
 
 		GameObject* GetOwner() { return mOwner; }
-		void SetOwner(class GameObject* owner) { mOwner = owner; }
-
-		UINT GetUpdateOrder() { return (UINT)mType; }
+		void SetOwner(GameObject* obj) { mOwner = obj; }
 
 	private:
-		const COMPONENTTYPE mType;
 		GameObject* mOwner;
 	};
 }
+

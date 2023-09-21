@@ -5,8 +5,14 @@
 #include "Editor_Windows.h"
 #include "hyApplication.h"
 
-//#pragma comment(lib, "..\\x64\\Debug\\YamYamEngine_Windows.lib")
-//
+#include "..\\Directx11_2D_Engine_Windows\\hyLoadScene.h"
+#ifdef _DEBUG
+#pragma comment(lib, "..\\x64\\Debug\\Directx11_2D_Engine_Windows.lib")
+
+#else
+#pragma comment(lib, "..\\x64\\Release\\Directx11_2D_Engine_Windows.lib")
+#endif 
+ 
 //#include "hyApplication.h"
 
 #define MAX_LOADSTRING 100
@@ -129,6 +135,7 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 
     application.SetWindow(hWnd, 900, 600);
     application.Initialize();
+    hy::InitializeScenes();
 
     return TRUE;
 }

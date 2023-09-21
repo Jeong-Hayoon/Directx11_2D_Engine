@@ -12,15 +12,32 @@ namespace hy
 	public:
 		static void Initialize();
 		static void Update();
-		static void FixedUpdate();
+		static void LateUpdate();
 		static void Render();
 
 		static Scene* GetActiveScene() { return mActiveScene; }
 		// static Transform* GetPosition() { return tr; }
 
+		template <typename T>
+		static bool CreateScene(const std::wstring name)
+		{
+			std::map<std::wstring, Scene*>::iterator iter
+				= mScenes.find(name);
+
+			if (iter != mScenes.end())
+				return false;
+
+			T* scene = new T();
+			mScenes.insert(std::make_pair(name, scene));
+			scene->Initialize();
+
+			return true;
+		}
+		static Scene* LoadScene(const std::wstring name);
+
 	private:
 		static Scene* mActiveScene;
-		static Scene* mPlayScene;
+		static std::map<std::wstring, Scene*> mScenes;
 		// static Player* player;
 
 	};

@@ -84,9 +84,9 @@ namespace hy
 		GameObject::Update();
 
 	}
-	void Player::FixedUpdate()
+	void Player::LateUpdate()
 	{
-		GameObject::FixedUpdate();
+		GameObject::LateUpdate();
 	}
 	void Player::Render()
 	{

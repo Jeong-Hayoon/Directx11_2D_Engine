@@ -8,7 +8,7 @@ namespace hy
 		: mState(eState::Active)
 	{
 		mComponents.resize(COMPONENTTYPE::END);
-		AddComponent<Transform>();
+		//AddComponent<Transform>();
 	}
 
 	GameObject::~GameObject()
@@ -41,6 +41,14 @@ namespace hy
 
 			mComponents[i]->Initialize();
 		}
+
+		for (Script* script : mScripts)
+		{
+			if (script == nullptr)
+				continue;
+
+			script->Initialize();
+		}
 	}
 	void GameObject::Update()
 	{
@@ -59,15 +67,24 @@ namespace hy
 
 			mComponents[i]->Update();
 		}
+
+		for (Script* script : mScripts)
+		{
+			if (script == nullptr)
+				continue;
+
+			script->Update();
+		}	
 	}
-	void GameObject::FixedUpdate()
+
+	void GameObject::LateUpdate()
 	{
 		/*for (Component* comp : mComponents)
 		{
 			if (comp == nullptr)
 				continue;
 
-			comp->FixedUpdate();
+			comp->LateUpdate();
 		}*/
 
 		for (int i = 0; i < mComponents.size(); i++)
@@ -75,8 +92,17 @@ namespace hy
 			if (mComponents[i] == nullptr)
 				continue;
 
-			mComponents[i]->FixedUpdate();
+			mComponents[i]->LateUpdate();
 		}
+
+		for (Script* script : mScripts)
+		{
+			if (script == nullptr)
+				continue;
+
+			script->LateUpdate();
+		}
+
 	}
 	void GameObject::Render()
 	{
@@ -94,6 +120,14 @@ namespace hy
 				continue;
 
 			mComponents[i]->Render();
+		}
+
+		for (Script* script : mScripts)
+		{
+			if (script == nullptr)
+				continue;
+
+			script->Render();
 		}
 	}
 }

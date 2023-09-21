@@ -24,7 +24,7 @@ namespace hy
 	{
 	}
 
-	void Transform::FixedUpdate()
+	void Transform::LateUpdate()
 	{
 	}
 

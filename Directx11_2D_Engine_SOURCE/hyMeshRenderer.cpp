@@ -22,7 +22,7 @@ namespace hy
 	{
 	}
 
-	void MeshRenderer::FixedUpdate()
+	void MeshRenderer::LateUpdate()
 	{
 	}
 

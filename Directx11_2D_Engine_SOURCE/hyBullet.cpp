@@ -28,9 +28,9 @@ namespace hy
 
 		GameObject::Update();
 	}
-	void Bullet::FixedUpdate()
+	void Bullet::LateUpdate()
 	{
-		GameObject::FixedUpdate();
+		GameObject::LateUpdate();
 	}
 	void Bullet::Render()
 	{

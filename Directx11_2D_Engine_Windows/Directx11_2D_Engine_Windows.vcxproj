@@ -132,6 +132,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="..\Directx11_2D_Engine_SOURCE\hyBullet.h" />
+    <ClInclude Include="..\Directx11_2D_Engine_SOURCE\hyPlayer.h" />
+    <ClInclude Include="hyLoadScene.h" />
+    <ClInclude Include="hyPlayerScript.h" />
+    <ClInclude Include="hyPlayScene.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Directx11_2D_Engine_SOURCE\hyBullet.cpp" />
+    <ClCompile Include="..\Directx11_2D_Engine_SOURCE\hyPlayer.cpp" />
+    <ClCompile Include="hyLoadScene.cpp" />
+    <ClCompile Include="hyPlayerScript.cpp" />
+    <ClCompile Include="hyPlayScene.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

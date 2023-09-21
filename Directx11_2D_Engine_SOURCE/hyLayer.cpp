@@ -46,16 +46,16 @@ namespace hy
 		}
 	}
 
-	void Layer::FixedUpdate()
+	void Layer::LateUpdate()
 	{
 		/*for (GameObject* gameObject : mGameObjects)
 		{
-			gameObject->FixedUpdate();
+			gameObject->LateUpdate();
 		}*/
 
 		for (int i = 0; i < mGameObjects.size(); i++)
 		{
-			mGameObjects[i]->FixedUpdate();
+			mGameObjects[i]->LateUpdate();
 		}
 	}
 
