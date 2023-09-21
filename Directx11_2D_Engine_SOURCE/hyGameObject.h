@@ -73,13 +73,13 @@ namespace hy
 		virtual void LateUpdate();
 		virtual void Render();
 
-		void SetLayerType(LAYERTYPE LayerType) { mLayerType = LayerType; }
-		LAYERTYPE GetLayerType() { return mLayerType; }
+		void SetLAYER(LAYER layer) { mLayerType = layer; }
+		LAYER GetLayerType() { return mLayerType; }
 
 	private:
 		eState mState;
 		std::vector<Component*> mComponents;
-		LAYERTYPE mLayerType;	
+		LAYER mLayerType;
 		std::vector<Script*> mScripts;
 	};
 }

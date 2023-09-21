@@ -7,7 +7,7 @@
 namespace hy::object
 {
 	template <typename T>
-	static __forceinline T* Instantiate(LAYERTYPE type)
+	static __forceinline T* Instantiate(LAYER type)
 	{
 		T* gameObject = new T();
 		Scene* scene = SceneManager::GetActiveScene();
@@ -20,13 +20,13 @@ namespace hy::object
 
 
 	template <typename T>
-	static __forceinline T* Instantiate(LAYERTYPE type, Vector2 position)
+	static __forceinline T* Instantiate(LAYER type, Vector2 position)
 	{
 		T* gameObject = new T();
 		Scene* scene = SceneManager::GetActiveScene();
 		scene->AddGameObject(gameObject, type);
 		gameObject->Initialize();
-		gameObject->SetLayerType(type);
+		gameObject->SetLAYER(type);
 		gameObject->GetComponent<Transform>()->SetPosition(position);
 
 		return gameObject;

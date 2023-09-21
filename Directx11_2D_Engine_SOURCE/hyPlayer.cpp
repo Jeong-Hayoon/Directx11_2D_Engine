@@ -68,7 +68,7 @@ namespace hy
 		if (Input::GetKeyDown(KEY_CODE::SPACE) /*|| Input::GetKey(KEY_CODE::SPACE*/)
 		{
 			//Bullet* bullet = new Bullet;
-			Bullet* bullet = object::Instantiate<Bullet>(LAYERTYPE::Attack);
+			Bullet* bullet = object::Instantiate<Bullet>(LAYER::Attack);
 			Transform* bullettr = bullet->GetComponent<Transform>();
 			Vector3 playerpos = this->GetComponent<Transform>()->GetPosition();
 			bullettr->SetPosition(Vector3(playerpos));
@@ -78,7 +78,7 @@ namespace hy
 			meshRenderer->SetMesh(Resources::Find<Mesh>(L"TriangleMesh"));
 			meshRenderer->SetShader(Resources::Find<Shader>(L"TriangleShader"));
 
-			SceneManager::GetActiveScene()->AddGameObject(bullet, LAYERTYPE::Attack);
+			SceneManager::GetActiveScene()->AddGameObject(bullet, LAYER::Attack);
 		}
 
 		GameObject::Update();

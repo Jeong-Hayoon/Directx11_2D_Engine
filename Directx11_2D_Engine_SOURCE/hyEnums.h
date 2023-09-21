@@ -2,7 +2,7 @@
 
 namespace hy::enums
 {
-	enum LAYERTYPE
+	enum LAYER
 	{
 		NONE = 0,
 		Background,
