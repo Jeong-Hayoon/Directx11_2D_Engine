@@ -13,7 +13,7 @@ namespace hy::object
 		Scene* scene = SceneManager::GetActiveScene();
 		scene->AddGameObject(gameObject, type);
 		gameObject->Initialize();
-		gameObject->SetLayerType(type);
+		gameObject->SetLAYER(type);
 
 		return gameObject;
 	}
