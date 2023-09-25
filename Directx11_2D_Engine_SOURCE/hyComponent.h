@@ -14,6 +14,7 @@ namespace hy
 	public:
 		friend GameObject;
 
+		// 생성자에서 COMPONENTTYPE 지정
 		Component(COMPONENTTYPE type);
 		virtual ~Component();
 

@@ -7,6 +7,12 @@ namespace hy
 	GameObject::GameObject()
 		: mState(eState::Active)
 	{
+		// resize : 벡터의 용량을 지정된 크기로 늘리고, 해당 크기만큼의 공간을 지정된 값으로 초기화
+		// reserve() 함수와 resize() 함수가 있는데, 두 함수의 차이는 용량 확보 후 
+		// 그 공간을 초기화를 하느냐 하지 않느냐의 차이
+		//reserve(N) : N의 용량을 미리 확보해놓음.
+		// resize(N, number = 0) : N의 용량을 미리 확보해놓고 나머지 공간을 두 번째 매개변수의 값으로 채움.두 번째 매개변수가 없으면 0
+	
 		mComponents.resize(COMPONENTTYPE::END);
 		//AddComponent<Transform>();
 	}
