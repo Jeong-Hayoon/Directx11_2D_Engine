@@ -28,11 +28,13 @@ namespace hy::graphics
 
         DXGI_SWAP_CHAIN_DESC swapChainDesc = {};
 
-        swapChainDesc.OutputWindow = application.GetHwnd();	                // Front Buffer 를 출력시킬 윈도우 핸들
+        // 스왑체인 옵션 설정
+        swapChainDesc.OutputWindow = application.GetHwnd();	// Front Buffer 를 출력시킬 윈도우 핸들
         swapChainDesc.Windowed = true;		                // 윈도우, 전체화면 모드
         swapChainDesc.BufferCount = 2;
         swapChainDesc.SwapEffect = DXGI_SWAP_EFFECT_DISCARD; // 이전 프레임 장면을 유지하지 않는다.
 
+        // 렌더링 타겟으로 사용되도록 설정   
         swapChainDesc.BufferUsage = DXGI_USAGE_RENDER_TARGET_OUTPUT;
         swapChainDesc.BufferDesc.Width = application.GetWidth();
         swapChainDesc.BufferDesc.Height = application.GetHeight();
@@ -51,6 +53,9 @@ namespace hy::graphics
         if (!CreateSwapChain(swapChainDesc))
             return;
 
+        // SwapChain 생성시 갖고있던 버퍼를 받아서 ID3D11Texture2D 객체에 저장
+        // __uuidof - 지정된 이름의 COM 개체(COM은 Windows에서 사용되는 소프트웨어 구성 요소 모델)의 
+        //              UUID(Universally Unique Identifier)를 반환
         // Get render target by Swapchain
         hr = mSwapChain->GetBuffer(0, __uuidof(ID3D11Texture2D), (void**)mFrameBuffer.GetAddressOf());
 
